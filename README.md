@@ -1,4 +1,4 @@
-# votaciones_smart_contracts_UC3M
+# Votaciones smart contracts UC3M
 
 Es necesario disponer de una blockchain de pruebas como Ganache. 
 
