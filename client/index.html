@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UC3M/Votaciones</title>
+    <link rel='stylesheet' type='text/css' href='main.css'>
+</head>
+<body>
+    <header>
+        <h1>VOTACIONES UNIVERSIDAD CARLOS III DE MADRID</h1>
+    </header>
+    <main>
+
+        <section id="instrucciones">
+            <h2>Instrucciones para poder votar:</h2>
+            <ol>
+                <li>Instala en tu navegador la cartera Metamask.</li>
+                <li>Necesitarás tener fondos suficientes de Ethereum (no será necesario más de 15 dólares en equivalencia).</li>
+                <li>Primero deberás solicitar el token (Si la transacción se realiza sin problemas, lo tendrás ya disponible para votar).</li>
+                <li>Una vez lo tengas, podrás votar indicando el ID del candidato por el que votas.</li>
+            </ol>
+        </section>
+
+        <section id="instrucciones2">
+            <h2>Datos de diferentes alumnos para poder realizar una prueba:</h2>
+            <ol>
+                <li><b>ALUMNO 1: NIA:</b>100429100 <b>CONTRASEÑA:</b> k3Y7gA <b>HASH:</b>0x11b87f92137d053b468d8817357adbb5b99ce6f7c8ecb9f609e042437bb296ce</li>
+                <li><b>ALUMNO 2: NIA:</b>100429200 <b>CONTRASEÑA:</b> p5Zn4U <b>HASH:</b>0x7084facabf794ea854e9e4d19c478e25f7aff7a407b464ffb8e54c4007e9989a</li>
+                <li><b>ALUMNO 3: NIA:</b>100429300 <b>CONTRASEÑA:</b> 7wL0tQ <b>HASH:</b>0x84eef9b1964c539570011ae2a3ef2c36ddfcf973a2104f97528774f9e27d33a7</li>
+                <li><b>ALUMNO 4: NIA:</b>100429400 <b>CONTRASEÑA:</b> 8uB2iX <b>HASH:</b>0x787676387492544cd03d0cf5f4b603bd37d404c0527fa398f3cd7450d8f16292</li>
+                <li><b>ALUMNO 5: NIA:</b>100429500 <b>CONTRASEÑA:</b> y1J5mT <b>HASH:</b>0x030a702289f5a379e20bd92fdd2457f94db156c34f0b5a3f34062c1de7c7a583</li>
+            </ol>
+        </section>
+        
+        <section id="wallet-section">
+            <h4>Dirección de la cartera conectada: <span id="account"></span></h4>
+            <h4>Balance de token UC3M: <span id="balance"></span></h4>
+        </section>
+
+        <form class = "input-group" id = "votar_id">
+            <h3>FUNCIONES PARA LOS VOTANTES</h3>
+            <button class="action-button">Votar</button>
+            <input type="number" name="id_candidato" id="id_candidato" placeholder="Introduce el ID del candidato que quieras votar">      
+        </form>
+
+        <form class = "input-group" id = "solicitar_token">
+            <button class="action-button">Solicitar Token</button>
+            <input type="number" name="nia" id="nia" placeholder="NIA">
+            <input type="text" name="password" id="password" placeholder="Contraseña">
+        </form>
+
+        <form class = "input-group" id = "ver_candidatos">
+            <button class="action-button">Ver candidatos</button>  
+        </form>
+
+        <form class = "input-group" id = "add_hash">
+            <h3>FUNCIONES PARA LA UNIVERSIDAD</h3>
+            <button class="action-button">Añadir hash alumno</button>
+            <input type="number" name="nia" id="nia" placeholder="NIA">  
+            <input type="text" id="hash_alumno" name="hash_alumno" pattern="^0x[a-fA-F0-9]{64}$" placeholder="Hash del alumno">    
+        </form>
+
+        <form class = "input-group" id = "insertar_candidato">
+            <button class="action-button">Añadir candidato</button>
+            <input type="text" name="nombre_candidato" id="nombre_candidato" placeholder="Nombre del candidato">
+            <input type="number" name="edad_candidato" id="edad_candidato" placeholder="Edad del candidato">        
+        </form>
+
+        <form class = "input-group" id = "eliminar_candidato">
+            <button class="action-button">Eliminar candidato</button>
+            <input type="number" name="id_candidato_eliminar" id="id_candidato_eliminar" placeholder="ID del candidato">        
+        </form>
+
+        <form class = "input-group" id = "activar_votaciones">
+            <button class="action-button">Activar periodo de votaciones</button>        
+        </form>
+        
+        <h3>RESULTADOS DE LAS VOTACIONES: </h3>
+        <form class = "input-group" id = "ver_ganador">
+            <button class="action-button">Publicar resultados de las votaciones</button>        
+        </form>
+
+
+
+    </main>
+    <script src='./libs/@truffle/contract/dist/truffle-contract.min.js'></script>
+    <script src='./app.js'></script> 
+    <script src='./ui.js'></script>
+    
+</body>
+</html>
+
